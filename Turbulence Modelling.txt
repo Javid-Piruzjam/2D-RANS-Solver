@@ -1,0 +1,39 @@
+ Turbulence Modelling K-Epsilon Modelling
+ 
+ 
+ Method:
+ 1. The equations are discretized explicitly
+ 2. The k and epsilon equations have new stability condition
+ 3. The u and v equation's stability condition is also changed due to the dependence of k and epsilon
+ 
+ Problem:
+ 1. The equation is highly instable and depends on both MESH and TIMESTEPS
+ 2. Only few settings can be used for simulation for a few timesteps
+ 3. The K values oscillate and produce negative K values which results in "nan" if the initial settings and timesteps are wrong.
+ 
+Settings for Working:
+ 
+Setting - 1:(optimal)
+xlength                13.5	
+ylength                3.0	
+imax                   60	
+jmax                   30	
+RectangleX1	       0   
+RectangleY1            0     
+RectangleX2            3.0       
+RectangleY2            1.5      
+dt                     0.0001      
+timesteps              30000       
+
+Setting - 2:
+xlength                30	
+ylength                1.5	
+imax                   100	
+jmax                   30	
+RectangleX1	       0   
+RectangleY1            0     
+RectangleX2            7.5       
+RectangleY2            0.75      
+dt                     0.0001      
+timesteps              20000 
+
